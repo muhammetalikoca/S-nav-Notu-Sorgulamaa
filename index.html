@@ -127,7 +127,7 @@
         
         .sira-kutusu {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around; /* İki öğe olduğu için daha dengeli durması adına güncellendi */
             margin-top: 15px;
             font-size: 14px;
             background: #f8f9fa;
@@ -237,7 +237,7 @@
 
                 const lgsPuan = parts[25];
                 const gnls = parts[26];
-                const snfs = parts[27];
+                // Sınıf sıra değerini değişkenden ve HTML'den kaldırdık
                 const krms = parts[28];
 
                 let detayHtml = `
@@ -254,7 +254,6 @@
                     <div class="sira-kutusu">
                         <span><strong>Genel Sıra:</strong> ${gnls}</span>
                         <span><strong>Kurum Sıra:</strong> ${krms}</span>
-                        <span><strong>Sınıf Sıra:</strong> ${snfs}</span>
                     </div>
 
                     <table class="karne-tablosu">
