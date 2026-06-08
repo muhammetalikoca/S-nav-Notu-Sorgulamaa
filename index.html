@@ -127,7 +127,7 @@
         
         .sira-kutusu {
             display: flex;
-            justify-content: space-around; /* İki öğe olduğu için daha dengeli durması adına güncellendi */
+            justify-content: space-between;
             margin-top: 15px;
             font-size: 14px;
             background: #f8f9fa;
@@ -142,7 +142,7 @@
 
     <div class="container">
         <h2>Deneme Sınavı Sorgulama</h2>
-        <p style="color: #666; font-size: 14px;">Sonucunuzu görmek için Öğrenci No veya TC giriniz.</p>
+        <p style="color: #666; font-size: 14px;">Sonucunuzu görmek için TC giriniz.</p>
 
         <input type="text" id="tcInput" placeholder="Öğrenci No veya TC">
         <button onclick="notGetir()">Sorgula</button>
@@ -237,8 +237,6 @@
 
                 const lgsPuan = parts[25];
                 const gnls = parts[26];
-                // Sınıf sıra değerini değişkenden ve HTML'den kaldırdık
-                const krms = parts[28];
 
                 let detayHtml = `
                     <div style="text-align:center; margin-bottom:15px; font-size:15px; color:#555;">
@@ -253,7 +251,6 @@
 
                     <div class="sira-kutusu">
                         <span><strong>Genel Sıra:</strong> ${gnls}</span>
-                        <span><strong>Kurum Sıra:</strong> ${krms}</span>
                     </div>
 
                     <table class="karne-tablosu">
